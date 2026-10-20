@@ -1,0 +1,8 @@
+{
+ "说明": "深大 RP 视觉组开源仓库 src/app_plugin/detector/config/camera.yaml 中的相机参数（8mm 镜头），适用于 1440x1080 的四段视频。装甲板_蓝.mp4 是另一台设备拍的 640x480 视频，没有对应内参。",
+ "image_width": 1440,
+ "image_height": 1080,
+ "camera_matrix": [[2319.9, 0.0, 721.4435], [0.0, 2322.7, 606.3215], [0.0, 0.0, 1.0]],
+ "distortion_coefficients": [-0.0859, 1.065, -0.0011, -0.0016, 0.0],
+ "distortion_model": "plumb_bob (k1, k2, p1, p2, k3)"
+}
