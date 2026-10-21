@@ -54,7 +54,8 @@ def process_video(video_name, config, K=None, dist=None):
     print(f"{'='*60}")
     
     # 初始化
-    detector = ArmorDetector(color=color)
+    is_blue = (color == "blue")
+    detector = ArmorDetector(color=color, is_blue_video=is_blue)
     solver = PnPSolver(K, dist) if (has_pose and K is not None) else None
     
     if is_gyro:
@@ -393,7 +394,7 @@ def main():
     all_results = {}
     
     # 处理各视频
-    video_order = ["远距离平移", "中距离陀螺", "近距离陀螺", "装甲板_蓝"]
+    video_order = ["远距离平移", "中距离陀螺", "近距离陀螺", "装甲板_蓝"]#"远距离平移", "中距离陀螺", "近距离陀螺", "装甲板_蓝"
     
     for video_name in video_order:
         config = VIDEO_CONFIGS[video_name]

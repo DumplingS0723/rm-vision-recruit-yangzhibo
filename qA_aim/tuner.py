@@ -17,7 +17,7 @@ def nothing(x):
 
 def main():
     # 视频选择
-    video_path = DATA_DIR / "近距离陀螺.mp4"
+    video_path = DATA_DIR / "装甲板_蓝.mp4"
     if not video_path.exists():
         print("请将视频文件放在 data/armor/ 目录下")
         return
